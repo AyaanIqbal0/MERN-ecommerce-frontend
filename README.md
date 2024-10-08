@@ -1,50 +1,30 @@
-# React + TypeScript + Vite
+# ShopEase
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An E-commerce platform for seamless shopping with data caching for faster load times.
 
-Currently, two official plugins are available:
+## Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Watch Video Demo](https://www.youtube.com/watch?v=S0VFI4JdiEo&feature=youtu.be) 
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Built using the MERN stack, integrated with Stripe for secure payment processing
+- Product filtering, sorting, and a cart with order caching
+- Admin dashboard for managing products and inventory
+- Responsive UI designed with React.js and Material-UI
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Frontend**: React.js, Material-UI
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB
+- **Payment Processing**: Stripe
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Screenshots
+![ecom1](https://github.com/user-attachments/assets/3868ffe3-7236-4046-850b-967a48b2f6d6)
+![ecom2](https://github.com/user-attachments/assets/d1e752c0-76bd-43c8-8ed8-153c0716ab51)
+![ecom3](https://github.com/user-attachments/assets/b97a32b8-7f32-43ed-8a2e-38269ded12cc)
+![ecom4](https://github.com/user-attachments/assets/4eda3788-ae5d-4b81-80a1-3cc80a9285a9)
+![ecom5](https://github.com/user-attachments/assets/0d8547b9-12b9-4883-b0d8-2c61230ed45c)
+![ecom6](https://github.com/user-attachments/assets/9aaafd0e-5340-4527-84c7-37175f890e71)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
